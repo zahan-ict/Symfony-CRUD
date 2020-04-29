@@ -65,7 +65,7 @@ class PostController extends AbstractController
   }
 
   /**
-   * @Route("/update/{id}", name="update_message")
+   * @Route("/update/{id}", name="update_message") // name is optional
    * Method({"GET","POST"})
    */
   public function update(Request $request, $id)
