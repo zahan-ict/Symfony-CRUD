@@ -5,16 +5,16 @@ This application is dedicated to the MySQL database. I have added Bootstrap 4 ju
 
 
 ## Screenshot of post list
-![Image description](screenshots/message-list.png)
+![Image description](screenshots/list_message.png)
 
 ## Screenshot of post insert
-![Image description](screenshots/insert.png)
+![Image description](screenshots/insert_message.png)
 
 ## Screenshot of post update
-![Image description](screenshots/update.png)
+![Image description](screenshots/update_message.png)
 
 ## Screenshot of post delete
-![Image description](screenshots/delete.png)
+![Image description](screenshots/delete_message.png)
 
 
 ## License
