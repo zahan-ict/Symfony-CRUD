@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <meta charset="UTF-8">
+        <title>{% block title %}Welcome!{% endblock %}</title>
+        {% block stylesheets %}{% endblock %}
+        <style>
+        .container{
+            border:1px solid #ccc;
+            width: 1000px;
+            margin:30px auto;
+            padding: 25px;
+        }
+
+        table, th, td {
+            border:1px solid #ccc;
+            border-collapse:collapse;
+            padding:4px;
+        }
+        .container{
+            margin:30px auto; 
+            border:1px solid #ccc; 
+            max-width:1000px; 
+            padding: 20px;
+        }
+        </style
+    </head>
+
+    <body>
+
+       <div class="container">
+       {{ include('master/header.html.twig') }}
+        
+        {% block body %}{% endblock %}
+        </div>
+
+
+        {% block javascripts %}{% endblock %}
+    </body>
+</html>

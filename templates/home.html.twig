@@ -1,0 +1,43 @@
+{% extends 'base.html.twig' %}
+
+{% block title %} Home {% endblock %}
+
+{%  block body  %} 
+
+{% if posts %}
+<h2> List Post </h2>
+
+
+    <a href="/insert">Insert User</a><br><br>
+
+    <table class="table">
+        <th>User ID</th>
+        <th>UserName</th>
+        <th> Email </th>
+        <th> Message </th>
+        <th> Insert Time </th>
+        
+        <th>Actions</th>
+
+        {% for post in posts %}
+        <tr>
+            <td>{{post.id}}</td>
+            <td>{{post.name}}</td>
+            <td>{{post.email}}</td>
+            <td>{{post.message}}</td>
+            <td>{{post.time|date('d-m-Y h:i:sa')}}</td>
+           
+            <td>
+                <a href="/update/{{post.id}}"><button class="btn btn-primary">Update</button></a>
+                <a onclick="return confirm('Are you sure?')" href='/delete/{{ post.id }}'><button class="btn btn-danger">Delete</button></a>
+            </td>
+        </tr>
+        {% endfor %}
+ 
+    </table>
+
+ {% else %}
+    <p>No post to display</p>
+  {% endif %}
+
+ {% endblock %}
